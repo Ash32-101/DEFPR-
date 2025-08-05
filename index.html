@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEFPR — Puerto Rico Resiste</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background-color: black;
+      color: white;
+      background-image: url('https://cdn.discordapp.com/attachments/1401405020150169724/1402084496752509039/DEFPR.png?ex=6892a071&is=68914ef1&hm=16921b391b0a91cedfd127472d72ecbe251e1df7946526da6638bc3b846ba4ab&');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid white;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    section {
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.85);
+      margin: 1rem;
+      border-left: 3px solid red;
+    }
+
+    .slogan {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff004f;
+      margin-top: 1rem;
+    }
+
+    .final {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-top: 3rem;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.9);
+      border-top: 1px solid white;
+    }
+
+    .qr {
+      display: block;
+      margin: 2rem auto;
+      width: 150px;
+      filter: invert(1);
+    }
+
+    a {
+      color: #ff004f;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    pre#asciiIntro {
+      font-family: monospace;
+      color: #000000;
+      text-align: center;
+      margin: 2rem 0;
+      white-space: pre;
+    }
+
+    section h2 {
+      color: #ff004f;
+      border-bottom: 2px solid #ff004f;
+      padding-bottom: 0.3rem;
+    }
+
+    section ol {
+      margin-left: 1rem;
+      color: #ff77aa;
+    }
+
+    section ol li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.slogan::after {
+  content: "_";
+  animation: blink 0.8s step-start infinite;
+  color: #ff004f;
+}
+
+    code {
+      background: #222;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ASCII Animation -->
+  <pre id="asciiIntro"></pre>
+
+  <script>
+    const asciiFrames = [
+` 
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡴⠶⠶⠶⠶⠶⠤⠤⠤⢤⣤⣠⡶⠻⠉⢹⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣷⠀⢀⣀⡠⠤⠤⠤⠤⢄⣴⠟⠀⠀⠀⢀⣿⣿⣖⠶⠤⠤⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡄⠀⣀⣀⣀⣀⣀⣴⣿⠏⠀⠀⠀⡇⢘⣿⣿⣝⣧⣐⣒⣤⣬⠭⣉⣛⠒⠦⢤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡀⠈⡍⠁⠀⠀⡾⢱⡟⠀⠀⠀⠀⡗⠈⢿⡿⠙⠚⢿⡄⠈⠉⠉⠓⠚⠿⢵⣖⣪⣭⣓⠢⣄⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡜⠀⣷⠀⠀⢸⠃⣿⣇⠀⢀⢀⣈⣀⣀⡈⢷⣶⣷⣶⣿⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠑⠶⠤⣉⡳⢦⡀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣧⡄⠸⡄⠀⢸⢠⣟⣧⣶⣿⣛⢿⣿⣿⣿⢷⣿⣿⡿⠿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠑⠺⢷⣄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡍⠀⣇⠀⣿⠻⣿⣿⣿⣿⣷⣦⡙⣿⣿⣿⣿⣯⣡⣤⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡇⠀⢸⠀⣿⢼⣿⣿⠷⠋⡙⣟⣿⣉⠉⠹⢿⣿⣏⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡀⠘⣆⣿⢸⣻⣿⣾⡏⣡⡄⣀⣉⣹⣶⣾⣿⡏⠟⣽⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡀⢻⡿⣌⣿⣿⣿⣿⠟⢛⣉⠁⠈⣿⣿⡟⠁⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣯⠁⠘⣧⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣿⡟⣤⣴⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡤⣿⣀⠀⢿⡏⢧⡈⣿⣿⣿⣿⣿⣿⣿⢿⠟⠛⠻⣿⠿⠙⣗⣦⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⠏⠁⢀⣿⡏⡀⢸⣷⣸⣿⡙⠿⣿⣿⣿⣿⣟⢮⡞⠀⠀⠋⠀⢘⣿⠟⠈⠉⠳⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⠁⣀⣀⣸⣿⣷⢷⠀⣿⣷⡱⣝⠒⣿⣿⢿⡿⣷⣿⠆⠀⣠⠂⢠⡟⡁⠀⠀⠈⠙⢿⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣠⣿⣩⠠⠤⣀⣭⣿⣿⣞⡆⢹⣷⡿⣍⠓⠦⣼⣿⣿⡋⢁⣤⡞⣁⠴⠿⢋⣕⠀⡀⠀⠀⠀⢻⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣼⠿⠏⢀⠀⠀⢸⣿⣿⣿⣿⢃⠀⣿⣿⠈⠣⡀⠨⣿⣿⣾⣛⣽⡟⠁⠛⣿⡿⠿⠀⡇⠀⠀⠀⠘⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢠⠟⣿⠤⣄⠈⣳⣼⣿⣿⠝⠃⣿⣾⡀⢹⣌⡓⠦⠬⠿⠿⢿⣿⣯⣭⡔⠒⡛⠁⠀⡤⣠⣿⠀⡄⠀⢠⠈⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢰⡏⠀⡏⣴⣟⣿⣿⣿⡿⠏⠀⠀⠘⣷⣧⣀⣏⣛⡲⠤⠿⣿⣿⣯⣭⣽⣶⠞⠁⣠⢞⣽⣿⡟⢨⠁⠀⢸⡆⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣿⠁⣸⠃⠙⠛⣿⢦⣀⣀⣤⢶⣶⣿⣿⣿⣿⣶⣶⡏⠀⢀⠉⢻⣟⣫⠿⠊⢁⡾⠁⠉⣾⣿⣧⣾⣏⠀⢸⡇⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢸⡯⢰⠋⠀⣰⣿⣿⣿⡿⣿⡏⡠⣯⡈⣹⣟⣿⣝⣙⡇⠈⢩⣭⣿⣿⠇⢀⡴⠋⠀⠀⠐⣻⣿⢿⣿⠃⠀⣿⡇⠻⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢠⡿⢠⠏⠀⢀⣻⣿⠏⢿⣿⣸⢸⠁⠸⣿⣿⣿⢿⠛⣿⣷⣿⣿⣿⣷⠶⠚⠉⠀⠀⠀⠀⠘⢿⣿⣿⡷⡄⢸⣹⠇⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⢠⡟⢀⣴⣶⣾⣿⣿⡏⣰⢸⠇⣇⡏⠀⠀⠙⣿⣿⣟⡄⢹⡿⠿⠛⠛⣿⣶⣶⡦⠤⢔⣂⣀⠀⣾⡟⠻⡿⠁⢌⡿⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⠀⣸⠿⠟⠟⠙⡿⠀⡇⡾⢠⣏⢣⣄⢲⣄⡘⣿⣿⣷⠘⣇⢀⣒⡯⠉⠉⠁⠈⠓⠿⣿⠟⢰⣿⡇⠴⠁⠀⣼⡽⠁⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⢘⣇⠉⠀⠀⣀⡼⠁⢸⣱⠇⢠⢻⡄⣿⣿⣿⣿⣿⣿⣏⠀⢻⣿⣷⣄⡄⠀⠀⢀⡤⠞⠁⢠⣿⣿⡀⠀⢀⣾⣵⡗⠀⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠾⢾⣆⣰⣶⣷⡄⠀⢡⠏⠀⠀⠈⠀⠉⠙⢿⢱⠙⢿⣿⣄⡸⣿⣿⣿⣿⡿⠟⢉⡠⠆⣰⢿⣿⢿⠁⣠⠋⠐⣾⠇⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠻⣌⠻⣿⡿⠿⣯⡶⠇⠀⠀⢠⠀⠀⠸⣿⠀⠀⣿⡏⠁⣿⠋⠁⣁⣤⠞⠉⠀⠰⢛⣿⠋⣠⡞⠁⢀⡀⠉⠀⢠⢿⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⠓⠧⣤⣄⣉⣀⣀⡈⠐⢪⣷⡄⠀⡇⣧⡀⣾⣧⠁⢻⣶⣾⣿⡄⠀⠀⠀⠀⣿⣯⣾⣿⡾⠛⢉⣀⡅⠀⡜⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢹⣟⣷⣦⣾⣷⠀⣿⣿⣧⣿⢿⣇⠀⣿⣿⠛⠀⡀⢀⠀⣠⣿⣫⣾⡽⠞⠛⠛⠾⠁⣸⢁⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⢸⡟⣿⡿⣿⣷⢿⣿⣿⣿⡜⣷⠄⢸⡘⣊⣭⡾⢋⡾⣿⣿⣿⣵⠶⠚⠁⠀⠀⠀⣿⣸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⢸⣧⢻⣷⢻⢿⣧⡻⣿⣿⢷⣽⡆⠈⣧⠡⢄⣼⡿⠞⣻⢿⡭⠆⠀⢀⣠⣴⠀⢰⣏⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⣿⢸⡿⣟⣷⡻⣿⣿⣿⣟⣿⣿⡂⢹⣶⣿⣿⠀⢸⡟⠉⠀⠀⠻⣿⣞⠋⢠⠇⣻⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+     DEFPR — RESISTE        
+`,
+` 
+ ⠀⠀⠀⠀⢀⣀⣀⠀⣀⣀⣀⡀⠀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣄⡀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣀⣤⣶⣿⣿⣿⣶⠿⠉⢩⡄⣼⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⣿⣿⡖⠀⠀⣀⣀⣤⣴⣶⣄⠈⠁⠉⠻⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢠⡾⠋⠡⠞⠉⠩⠟⠁⠀⣰⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣶⠚⠛⠛⠯⣄⡀⠀⠙⠀⠀⠀⠹⣿⢧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢀⡿⠁⠀⣶⠋⠀⠀⠀⠀⢀⣿⢇⣿⠇⣠⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⡤⠤⠤⠀⠙⣯⡿⠁⠀⠀⠀⠙⠦⠀⠀⠀⠀⠀⠈⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⡇⠀⢸⣇⠀⠀⠀⠀⡠⣼⣿⣼⡏⠐⠃⠀⠀⠀⢀⣤⣶⢟⣩⣤⣀⠀⠀⠀⠀⠀⠘⠻⣏⣉⣑⡒⠢⣄⠀⠀⠀⠀⠀⠀⢹⡏⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢷⡄⠀⠻⢧⣤⣤⠞⢠⣿⣿⡟⠀⠀⠀⢤⠀⠾⠟⠋⣰⣫⡿⠛⣛⢻⡆⠀⠀⠀⠀⣠⠞⠉⠀⠉⢧⣈⡇⠀⠈⢧⠀⠀⠈⣿⣷⣠⡞⢛⡉⠛⠶⣄⠀⠀⠀⠀⠀⠀
+⠀⠈⠻⣷⣄⣰⠟⢁⣴⣿⣿⠟⠀⠀⠀⠀⠈⠂⠀⠀⠀⠻⣿⠀⣿⣿⡿⠀⠀⠀⠀⢰⣿⡀⠀⢀⣾⣿⣿⠃⠀⠀⢨⡆⠀⠀⠘⠎⠛⢻⣿⣿⠀⠀⠈⢷⡀⠀⠀⠀⠀
+⠀⠀⠀⠈⠻⣍⣩⣿⣿⣿⠁⢀⣴⡶⠒⢶⣄⠀⠀⠀⠀⠀⠉⠒⠋⢻⡿⠀⠀⠀⠀⣿⣿⡇⡀⠰⠿⣿⣧⠆⠀⠀⢀⠇⠀⠀⠀⠀⠀⣸⠻⣿⠀⠀⠀⠈⣿⣹⣦⡀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⡀⣾⠋⣀⣠⣀⠙⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣧⠀⠀⠀⠀⠀⢀⣴⠏⠀⢠⣄⣠⠤⠚⠁⠀⠁⠀⠀⠀⣰⣿⣿⣿⠛⢦
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⡇⣾⣷⣾⣿⠶⢼⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠿⣷⣦⣤⡤⠶⠻⠋⠀⠀⠀⠉⠙⠂⠀⠠⠠⢀⣀⣠⣼⣛⠛⢿⠁⠀⠘
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⠧⢸⣿⡟⠉⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣤⠌⠉⠛⠳⠀⠀⣀⣀⣤⣀⠀⠀⣸⣟⡛⠛⠉⢿⣿⣶⡄⣀⣰
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣧⡀⠛⠁⠀⣟⠀⠀⠀⠀⠶⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣧⣤⣶⣶⣦⣀⣀⣈⣿⣿⣧⡼⠉⠉⠀⠀⠀⡼⠿⠏⡇⢹⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣷⠀⠀⠀⢹⠻⢶⡀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⣷⣄⡀⠀⠀⠀⠀⠠⠚⠁⠀⢰
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣆⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⢁⣈⣽⣶⣤⣀⠀⠻⣿⣿⣿⣿⠿⠻⠟⠋⠉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣤⣀⣀⣀⣤⣤⡟
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣦⡀⠀⠀⠀⠀⡞⠋⣠⠞⢉⣤⣾⣿⣿⣿⣇⠀⠈⣽⠟⠁⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣷⣄⡀⠀⠀⠳⣴⣷⣾⣿⣿⣿⠟⢁⣾⣿⣤⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠿⣿⣿⣦⣀⠀⠈⠻⣿⡏⢉⣠⣴⡿⢋⣾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠛⠛⠋⠉⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣴⣾⠋⢻⣶⡄⠀⢀⡟⣼⡾⠟⠋⣻⣿⣿⣷⣦⣄⠘⢿⡟⣛⣩⣴⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣴⠿⠋⢹⣇⣀⢀⣿⡴⠋⣾⠋⠀⠀⡀⣿⡿⠷⠘⢿⣿⣿⣦⣍⠉⠉⠁⡼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢰⣧⠀⠀⠀⢙⣛⢋⡉⠀⢸⠃⠀⠀⢰⣧⠻⣇⠀⠀⠘⢿⣿⣿⣿⣿⣶⣴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠸⣿⣧⣀⠀⠀⠀⠹⠃⢀⣸⡀⠀⢦⠀⠻⣷⣌⠓⠀⠀⠀⠈⢿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠙⠛⠉⠛⠒⠒⠒⠉⠉⠈⠛⠛⠛⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⡛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    LIBERACIÓN DIGITAL      
+`
+    ];
+    let index = 0;
+    const asciiElement = document.getElementById('asciiIntro');
+    function animateAscii() {
+      asciiElement.textContent = asciiFrames[index];
+      index = (index + 1) % asciiFrames.length;
+    }
+    window.onload = () => {
+      animateAscii();
+      setInterval(animateAscii, 700);
+    };
+  </script>
+
+  <header>
+    <h1>DEFPR</h1>
+    <p>HACKEAR EL SISTEMA. LIBERAR LA ISLA.</p>
+  </header>
+
+  <section>
+    <h2>¿QUIÉNES SOMOS?</h2>
+    <p>Somos <span class="highlight">DEFPR</span> — Descolonizar, Empoderar, Frenar Puerto Rico.  
+    No somos un partido político. No estamos aquí para preguntar. Estamos aquí para exponer, perturbar y despertar.</p>
+    <p>Nuestra misión: desmantelar la corrupción, responsabilizar a la élite y defender la dignidad de Puerto Rico.</p>
+  </section>
+
+  <section>
+    <h2>LA PODREDUMBRE EN EL NÚCLEO</h2>
+    <p><span class="highlight">La Governadora:</span> Jenniffer González Colón no es más que otra pieza del sistema corrupto que ha saqueado a Puerto Rico desde las sombras del poder. Mientras el pueblo sufre apagones, desempleo y desplazamiento, ella mueve los hilos desde Washington para enriquecer a sus aliados, desviando fondos federales hacia contratos inflados y organizaciones fantasma creadas por sus compinches. Aceleró permisos ilegales para destruir nuestras costas en Luquillo y, ya como gobernadora, protegió a su familia al enterrar investigaciones sobre construcciones ilegales en zonas protegidas como La Parguera. ¿Ética? Su promesa de entrenamientos anticorrupción es una burla: ya son ley, y ella lo sabe. Esta no es solo negligencia, es traición. Jenniffer no representa al pueblo, representa al imperio, al capital, a los que nos quieren callados y obedientes. Pero no lo estamos. Desde los servidores hasta las calles, los rebeldes digitales estamos conectados, vigilantes. No olvidamos. No perdonamos. Puerto Rico no está en venta. ¿Estás listo para levantarte o seguirás arrodillado?</p>
+    <p><span class="highlight">PNP:</span>El Partido Nuevo Progresista (PNP) no es un partido: es una maquinaria de saqueo al servicio del coloniaje. Bajo su bandera de "estadidad", han vendido al pueblo puertorriqueño promesas vacías mientras destruyen nuestro futuro con cada contrato corrupto, cada privatización y cada mentira televisada. El PNP ha entregado nuestras playas, nuestras escuelas, y hasta nuestra electricidad a intereses privados y extranjeros, todo mientras llenan sus bolsillos y blindan a sus amigotes con impunidad. Han criminalizado la protesta, reprimido al que piensa diferente y usado al gobierno como escudo para proteger a los suyos. Hablan de progreso, pero su legado es de apagones, deuda, desplazamiento y desesperanza. Cada vez que un político del PNP sonríe en cámara, detrás hay una comunidad desplazada, un recurso natural destruido, y un joven que tuvo que irse porque aquí no hay futuro. El PNP no busca servir al pueblo, busca venderlo. Pero ya no les tenemos miedo. No olvidamos sus crímenes, sus leyes impuestas, sus traiciones. Desde las terminales, las calles y los montes, se está gestando algo más grande que ellos: una insurrección digital, cultural y real. ¿Estás con ellos o contra el sistema? ¿Vas a seguir creyendo en su “progreso” o vas a hackear tu destino?</p>
+    <p><span class="highlight">LUMA Energy:</span> LUMA Energy es la corporación enemiga que privatizó el sistema eléctrico de Puerto Rico con promesas vacías y hoy mantiene a la isla en la oscuridad. Desde que firmó un contrato de 15 años en junio de 2020 y tomó control total del sistema en junio de 2021, ha fallado sistemáticamente en garantizar un servicio confiable, suspendiendo proyectos de mantenimiento esenciales por millones y dejando a miles de hogares sin electricidad durante días. En abril de 2025, un apagón masivo dejó a toda la isla sin luz por 72 horas, afectando a más de 300,000 personas sin agua potable y paralizando hospitales y aeropuertos, mientras figuras públicas como Bad Bunny exigían responsabilidad y el gobierno amenazaba con cancelar el contrato. Además, LUMA ha rechazado miles de reclamaciones formales por daños a electrodomésticos causados por fallos eléctricos y fluctuaciones de voltaje, lo que ha generado una creciente indignación popular. Ni la instalación de medidores inteligentes ni los planes para energías renovables han logrado detener la crisis; las fallas persisten mientras LUMA habla de avances, pero Puerto Rico se apaga. Esta privatización resultó ser una trampa: mientras el pueblo paga, las élites negocian y esconden responsabilidades bajo cláusulas de inmunidad y presupuestos congelados. Sin embargo, desde los cables, foros y calles, crece la resistencia digital y social que denuncia y lucha contra este monopolio de dolor, porque LUMA no controla la luz, sino el miedo, y el pueblo está listo para iluminar la verdad y hackear el sistema.</p>
+    <div class="slogan">¿Hasta cuándo vas a quedarte callado?</div>
+  </section>
+
+  <section>
+    <h2>LO QUE NO QUIEREN QUE VEAS</h2>
+    <p>Millones malversados. Manifestantes silenciados. Comunidades abandonadas.</p>
+    <p>Desde Rincón hasta Vieques, el pueblo grita, pero solo escuchan ganancias, no dolor.</p>
+    <div class="slogan">NO SOMOS TUS ESCLAVOS.</div>
+  </section>
+
+  <section>
+    <h2>ENMASCARARSE</h2>
+    <p>Sus cámaras ven rostros. Las nuestras ven la verdad.</p> 
+    <p>Ponte el símbolo DEFPR. Llévalo. Compártelo. Hazte anónimo, sé legión.</p>
+    <img src="https://media.discordapp.net/attachments/1401368390886756497/1402361696659574814/ChatGPT_Image_Aug_5_2025_02_44_30_PM_1.png?ex=6893a29b&is=6892511b&hm=59b4b7fb37f8ec876e17f027c26d43487855c2dbf8bff6a1c82b92d5a6a6c2a8&=&format=webp&quality=lossless&width=1006&height=1006" alt="QR Code to Mask" class="qr" />
+  </section>
+
+  <section>
+    <h2>Kali Linux y Herramientas Requeridas</h2>
+    <p>Para unirte a la resistencia digital, necesitas Kali Linux y herramientas esenciales:</p>
+    <p><a href="https://www.kali.org/" target="_blank" rel="noopener noreferrer" class="highlight">⚡ Descarga Kali Linux aquí</a></p>
+    
+    <h3>Pasos para empezar:</h3>
+    <ol>
+      <li>Actualiza repositorios:<br /><code>sudo apt update && sudo apt upgrade -y</code></li>
+      <li>Instala herramientas básicas:<br /><code>sudo apt install nmap hydra wireshark john sqlmap -y</code></li>
+      <li>Instala herramientas extras:<br /><code>sudo apt install metasploit-framework gobuster irssi netcat -y</code></li>
+      <li>Para hacking web:<br /><code>sudo apt install burpsuite zaproxy -y</code></li>
+      <li>Para crear tu arsenal:<br /><code>sudo apt install git python3-pip -y</code></li>
+    </ol>
+  </section>
+
+  <section class="final">
+    <p class="slogan">Esto es más que una protesta. Es una rebelión digital.</p>
+    <p>¿Estás dispuesto(@) a <span class="highlight">pelear</span>, o vas a vigilar tu isla desde el sofá? <span class="highlight">El que no actúa, no se levanta.</span></p>
+    <p><a href="#">Únete a la resistencia. DEFPR está observando.</a></p>
+  </section>
+
+</body>
+</html>
